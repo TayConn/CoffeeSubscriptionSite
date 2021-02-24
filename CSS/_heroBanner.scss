@@ -1,0 +1,38 @@
+.hero{
+    background-image: url(/assets/home/desktop/image-hero-coffeepress.jpg);
+    background-size: 100%;
+    object-fit: fill;
+    background-repeat: none;
+    border-radius: 10px;
+    margin: 0 5rem;
+}
+
+.heroContent{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 40%;
+    padding-bottom: 7.3rem;
+}
+
+.heroText{
+    display: flex; 
+    flex-flow: column wrap;
+    justify-content: start;
+    margin-left: 5.25rem;
+    color: white;
+
+    h1{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        max-width: 80%;
+    }
+}
+
+.heroButton{
+    margin-left: 5.25rem;
+    margin-top: 3.75rem;
+    max-width: 50%;
+}

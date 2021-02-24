@@ -1,0 +1,31 @@
+.navWrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.75rem 5rem;
+
+    ul{
+        display: flex;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: $font-body;
+
+    }
+
+    li{
+        font-size: .75rem;
+        padding-left: 1.3rem;
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: $color-grey;
+    }
+
+    a:hover{
+        color: black;
+    }
+}
+
