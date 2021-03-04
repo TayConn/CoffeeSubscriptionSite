@@ -29,3 +29,18 @@
     }
 }
 
+    .hamburger{
+        background-color: transparent;
+        border: 0;
+        color: $color-darkGreyBlue;
+        font-size: 1.25rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    .hamburger:focus{
+        outline: none;
+    }
+
+    
+

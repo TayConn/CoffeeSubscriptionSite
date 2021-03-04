@@ -1,38 +1,99 @@
-.hero{
-    background-image: url(/assets/home/desktop/image-hero-coffeepress.jpg);
-    background-size: 100%;
-    object-fit: fill;
-    background-repeat: none;
-    border-radius: 10px;
-    margin: 0 5rem;
-}
-
-.heroContent{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    max-width: 40%;
-    padding-bottom: 7.3rem;
-}
-
-.heroText{
-    display: flex; 
-    flex-flow: column wrap;
-    justify-content: start;
-    margin-left: 5.25rem;
-    color: white;
-
-    h1{
-        margin-bottom: 1rem;
+    .hero{
+        background-image: url(/assets/home/desktop/image-hero-coffeepress.jpg);
+        background-size: 100%;
+        object-fit: fill;
+        background-repeat: none;
+        border-radius: 10px;
+        margin: 0 5rem;
     }
 
-    p{
-        max-width: 80%;
+    .heroContent{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        max-width: 40%;
+        padding-bottom: 7.3rem;
+    }
+
+    .heroText{
+        display: flex; 
+        flex-flow: column wrap;
+        justify-content: start;
+        margin-left: 5.25rem;
+        color: white;
+
+        h1{
+            margin-bottom: 1rem;
+        }
+
+        p{
+            max-width: 80%;
+        }
+    }
+
+    .heroButton{
+        margin-left: 5.25rem;
+        margin-top: 3.75rem;
+        max-width: 50%;
+    }
+
+@media screen and (max-width: 799px){
+    .hero{
+        margin: 0 2.5rem;
+        background-image: url(/assets/home/tablet/image-hero-coffeepress.jpg);
+        
+    }
+    .heroContent{
+        max-width: 75%;
+        padding-bottom: 5rem;
+    }
+    .heroText{
+        margin-left: 3.5rem;
+        
+
+        h1{
+            font-size: 3rem;
+            max-width: 75%;
+        }
+    }
+
+    .heroButton{
+        margin-left: 3.5rem;
+        margin-top: 1rem;
     }
 }
 
-.heroButton{
-    margin-left: 5.25rem;
-    margin-top: 3.75rem;
-    max-width: 50%;
+@media screen and (max-width: 499px){
+    .hero{
+        margin: 0 1.5rem;
+        padding: 3rem 0;
+        // background-size: 220%;
+        // background-position: bottom right;
+        background-image: linear-gradient(to bottom,rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url(/assets/home/mobile/image-hero-coffeepress.jpg);
+    }
+    .heroContent{
+        max-width: 100%;
+        padding-bottom: 1rem;
+        justify-content: center;
+    }
+    .heroText{
+        margin: 0 2rem;
+        justify-content: center;
+        text-align: center;
+
+        h1{
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            max-width: 100%;
+        }
+        p{
+            margin-top: 0;
+            max-width: 100%;
+        }
+    }
+
+    .heroButton{
+        max-width: 65%;
+        margin-top: 1rem;
+    }
 }

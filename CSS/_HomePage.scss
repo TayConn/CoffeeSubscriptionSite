@@ -1,0 +1,381 @@
+
+    //homepage design elements
+
+    .ourCollection{
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        margin: 16.8rem 7.5rem 7rem 7.5rem;
+
+        .altTitleGradient{
+            background: linear-gradient(#dad9d5, #fff);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: -1;
+            top: 53rem;
+            position: absolute;
+            justify-self: center;
+            margin: 0;
+            line-height: 10rem;
+            text-transform: lowercase;
+            
+        }
+
+        .collectionItem{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            text-align: center;
+            min-width: 25%;
+            z-index: 1;
+            position: relative;   
+        }
+
+            img{
+                margin-bottom: 5.63rem;
+            }
+
+            h4{
+                margin: 0;
+            }
+
+
+            p{
+                padding: 0 3rem;
+            }
+    }
+
+    //Why Us
+
+    .whyUs{
+        background: $color-darkGreyBlue;
+        border-radius: 10px;
+        margin: 0 5rem 12.8rem 5rem;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        max-height: 650px;
+
+        .whyUsDetails{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            padding: 4rem 22rem 0 22rem;
+            align-items: center;
+
+            p{
+                max-width: 33.75rem;
+            }
+        }
+
+        .cardWrapper{
+            display: grid;
+            grid-template: 1fr / 1fr 1fr 1fr;
+            gap: 1.5rem;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 7rem; 
+        }
+
+        .cardItem{
+            background-color: $color-darkCyan;
+            border-radius: 8px;
+            border: none;
+            padding: 4.37rem 4.5rem 3.62rem 4.5rem;
+            position: relative;
+            bottom: -15%;
+
+            h4{
+                margin-top: 3.93rem;
+            }
+        }
+
+        .truckImg{
+            height: 72px;
+            width: auto;
+        }
+    
+
+    }
+
+    //How it Works Section
+
+    .howItWorks{
+        margin: 10rem 12.8rem 6rem 12.8rem;
+        padding-top: 2rem;
+    }
+
+    .howItWorksWrapper{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: -4rem;
+
+        position: relative;
+        top: -118px;
+    }
+
+    .howItWorksItem{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+
+        padding: 0 3rem;
+
+            h1{
+            color: $color-paleOrange;
+            margin: 3.5rem 0 2.75rem 0;
+            }
+            h3{
+                max-width: 70%;
+                margin: 0;
+            }
+            p{
+            color: $color-darkGreyBlue;
+            }
+    }  
+
+    .accentCircle{
+        width: 31px;
+        height: 31px;
+        background-color: white;
+        border: 2px solid $color-darkCyan;
+        border-radius: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .accentLine{
+        height: 2px;
+        color: $color-paleOrange;
+        width: 870px;
+        z-index: -1;
+        border: 2px solid $color-paleOrange;
+        margin: 6.25rem 3.5rem;
+    }
+
+    //footer
+    footer{
+        background-color: $color-darkGreyBlue;
+        padding: .1rem;
+
+            .footerWrapper{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                margin: 2rem 2.5rem;
+                }
+
+                ul{
+                    display: flex;
+                    justify-self: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-family: $font-body;
+                    padding-left: 0;
+                    
+                }
+
+                li{
+                    font-size: .75rem;
+                    // padding-left: 1.3rem;
+                    list-style: none;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $color-grey;
+                    padding: 0 .75rem;
+                }
+
+                a:hover{
+                    color: white;
+                }
+
+
+                .socialLinks{
+                    justify-self: flex-end;
+                }
+
+                .footerNavLinks{
+                    justify-self: center;
+                }
+
+                .footerLogo{
+                    justify-self: flex-start;
+                }
+    }
+
+
+  @media screen and (max-width: 799px){
+
+    .ourCollection{
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        
+        gap: 1rem;
+        margin: 5rem 2.5rem;
+        max-width: 100vw;
+
+
+            h1{
+                font-size: 6.25rem;
+                text-align: center;
+                align-self: center;
+                max-width: 100vw;
+            }
+
+            .altTitleGradient{
+                top: 45rem;
+                line-height: 5rem;
+            }
+
+            .collectionItem{
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                text-align: left;
+                z-index: 1;
+                position: relative;
+                gap: .5rem;
+                margin: 3.5rem 1rem;
+                max-height: 10rem; 
+                max-width: 90vw;
+            }
+
+            img{
+                max-width: 40vw;
+            }
+
+            h4{
+                margin: 0;
+            }
+
+            p{
+                padding: 0;
+            }
+
+            .item-textWrap{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                max-width: 30vw;
+            }
+        }
+
+        .whyUs{
+            
+            margin: 0 5rem 20rem 5rem;
+            justify-content: center;
+            max-height: auto;
+    
+            .whyUsDetails{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                padding: 2rem 2.25rem 0 2.25rem;
+                align-items: center;
+            }
+    
+            .cardWrapper{
+                display: grid;
+                grid-template: 1fr 1fr 1fr / 1fr;
+                gap: 1.5rem;
+                justify-content: center;
+                align-items: center;
+                margin: 0 3rem; 
+            }
+    
+            .cardItem{
+                display: flex;
+                flex-flow: row nowrap;
+
+                padding: 3rem 1rem;
+                position: relative;
+                bottom: -15%;
+
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    max-width: 55px;
+                    max-height: 55px;
+                    margin: 1rem 2.5rem;
+                }
+                
+                .cardItem-textWrap{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    text-align: left;
+                    margin: 0 1rem;
+
+                    h4{
+                        margin: 0;
+                    }
+                }
+
+            }
+    
+            .truckImg{
+                height: auto;
+                width: 57px;
+            }
+        }
+
+        .howItWorks{
+            margin: 10rem 5rem 6rem 5rem;
+            padding-top: 4rem;
+        }
+    
+        .howItWorksWrapper{
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: -4rem;
+    
+            position: relative;
+            top: -118px;
+        }
+    
+        .howItWorksItem{
+            flex-flow: column wrap;
+            justify-content: flex-start;
+    
+            padding: 0 3rem;
+    
+                h1{
+                margin: 3.5rem 0 2.75rem 0;
+                }
+                h3{
+                    max-width: 70%;
+                    margin: 0;
+                }
+        }  
+    
+        .accentCircle{
+            width: 31px;
+            height: 31px;
+            background-color: white;
+            border: 2px solid $color-darkCyan;
+            border-radius: 100%;
+            position: relative;
+            z-index: 1;
+        }
+    
+        .accentLine{
+            height: 2px;
+            width: 30rem;
+            z-index: -1;
+            border: 2px solid $color-paleOrange;
+            margin: 6.25rem 3.5rem;
+        }
+
+    }
+
+  @media screen and (max-width: 499px){
+
+  }
