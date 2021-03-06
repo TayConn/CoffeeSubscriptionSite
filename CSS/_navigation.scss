@@ -1,46 +1,106 @@
-.navWrapper{
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: $color-grey;
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+header{
+    margin: 2.25rem 5rem 2rem 5rem;
+}
+
+nav{
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-ul{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2.75rem 5rem;
+    padding: 0;
+    list-style-type: none;
+    font-size: .75rem;
+    font-weight: bold;
 
-    ul{
-        display: flex;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-family: $font-body;
-
-    }
-
-    li{
-        font-size: .75rem;
-        padding-left: 1.3rem;
-        list-style: none;
-    }
-
-    a{
-        text-decoration: none;
+    li a{
+        display: inline-block;
         color: $color-grey;
+        text-transform: uppercase;
+        font-family: $font-body;
+        padding: 0 1.2rem;
+        text-decoration: none;
+        cursor: pointer;
+
     }
 
     a:hover{
-        color: black;
-    }
-}
-
-    .hamburger{
-        background-color: transparent;
-        border: 0;
-        color: $color-darkGreyBlue;
-        font-size: 1.25rem;
-        cursor: pointer;
-        display: none;
-    }
-
-    .hamburger:focus{
-        outline: none;
+        color: $color-paleOrange;
     }
 
     
+    ul{
+        position: absolute;
+        padding: 0;
+        display: none;
+        list-style-type: none;
+    }
+
+    li:hover ul ul {
+        display: none;
+        
+    }
+    li:hover ul {
+        display: block;
+        background-color: $color-lightCream;
+    }
+
+    li li:hover ul {
+        display: block;
+        margin-left: 1rem;
+        margin-top: -2rem;
+        
+    }
+}
+
+
+@media screen and (max-width: 999px){
+    header{
+        margin: 1.5rem;
+    }
+    nav{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 2.5rem 0;
+
+        li{
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            line-height: 2rem;
+            font-weight: normal;
+        }
+    }
+    .nav-ul{
+        display: none;
+        width: 100%;
+        flex-flow: column wrap;
+        text-align: center;
+        border-top: solid 1px $color-grey;
+    }
+
+    .nav-ul.show{
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .hamburger{
+        display:block;
+    }
+}
 

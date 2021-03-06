@@ -145,45 +145,178 @@ body p {
   max-width: 50%;
 }
 
-.navWrapper {
+@media screen and (max-width: 850px) {
+  .hero {
+    margin: 0 2.5rem;
+    background-image: url(/assets/home/tablet/image-hero-coffeepress.jpg);
+  }
+  .heroContent {
+    max-width: 75%;
+    padding-bottom: 5rem;
+  }
+  .heroText {
+    margin-left: 3.5rem;
+  }
+  .heroText h1 {
+    font-size: 3rem;
+    max-width: 75%;
+  }
+  .heroButton {
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .hero {
+    margin: 0 1.5rem;
+    padding: 3rem 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(/assets/home/mobile/image-hero-coffeepress.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/assets/home/mobile/image-hero-coffeepress.jpg);
+  }
+  .heroContent {
+    max-width: 100%;
+    padding-bottom: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .heroText {
+    margin: 0 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .heroText h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    max-width: 100%;
+  }
+  .heroText p {
+    margin-top: 0;
+    max-width: 100%;
+  }
+  .heroButton {
+    max-width: 65%;
+    margin-top: 1rem;
+  }
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #83888f;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+header {
+  margin: 2.25rem 5rem 2rem 5rem;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2.75rem 5rem;
 }
 
-.navWrapper ul {
+.nav-ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Barlow", sans-serif;
-}
-
-.navWrapper li {
+  padding: 0;
+  list-style-type: none;
   font-size: .75rem;
-  padding-left: 1.3rem;
-  list-style: none;
+  font-weight: bold;
 }
 
-.navWrapper a {
-  text-decoration: none;
+.nav-ul li a {
+  display: inline-block;
   color: #83888f;
+  text-transform: uppercase;
+  font-family: "Barlow", sans-serif;
+  padding: 0 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.navWrapper a:hover {
-  color: black;
+.nav-ul a:hover {
+  color: #fdd6ba;
+}
+
+.nav-ul ul {
+  position: absolute;
+  padding: 0;
+  display: none;
+  list-style-type: none;
+}
+
+.nav-ul li:hover ul ul {
+  display: none;
+}
+
+.nav-ul li:hover ul {
+  display: block;
+  background-color: #fefcf7;
+}
+
+.nav-ul li li:hover ul {
+  display: block;
+  margin-left: 1rem;
+  margin-top: -2rem;
+}
+
+@media screen and (max-width: 999px) {
+  header {
+    margin: 1.5rem;
+  }
+  nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 2.5rem 0;
+  }
+  nav li {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: normal;
+  }
+  .nav-ul {
+    display: none;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    text-align: center;
+    border-top: solid 1px #83888f;
+  }
+  .nav-ul.show {
+    display: block;
+    margin-top: 1rem;
+  }
+  .hamburger {
+    display: block;
+  }
 }
 
 .ourCollection {
@@ -394,27 +527,29 @@ footer .footerWrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2.75rem 5rem;
+  margin: 2rem 2.5rem;
 }
 
 footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: center;
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Barlow", sans-serif;
+  padding-left: 0;
 }
 
 footer li {
   font-size: .75rem;
-  padding-left: 1.3rem;
   list-style: none;
 }
 
 footer a {
   text-decoration: none;
   color: #83888f;
+  padding: 0 .75rem;
 }
 
 footer a:hover {
@@ -434,7 +569,381 @@ footer .footerLogo {
   justify-self: flex-start;
 }
 
-footer svg:hover path {
-  fill: #fdd6ba;
+@media screen and (max-width: 850px) {
+  .ourCollection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1rem;
+    margin: 5rem 2.5rem;
+    max-width: 100vw;
+  }
+  .ourCollection h1 {
+    font-size: 6.25rem;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 100vw;
+  }
+  .ourCollection .altTitleGradient {
+    top: 45rem;
+    line-height: 5rem;
+  }
+  .ourCollection .collectionItem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+    gap: .5rem;
+    margin: 3.5rem 1rem;
+    max-height: 10rem;
+    max-width: 90vw;
+  }
+  .ourCollection img {
+    max-width: 40vw;
+  }
+  .ourCollection h4 {
+    margin: 0;
+  }
+  .ourCollection p {
+    padding: 0;
+  }
+  .ourCollection .item-textWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 30vw;
+  }
+  .whyUs {
+    margin: 0 5rem 20rem 5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-height: auto;
+  }
+  .whyUs .whyUsDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem 2.25rem 0 2.25rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whyUs .cardWrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 1fr 1fr / 1fr;
+    gap: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 3rem;
+  }
+  .whyUs .cardItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    padding: 3rem 1rem;
+    position: relative;
+    bottom: -15%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whyUs .cardItem img {
+    max-width: 55px;
+    max-height: 55px;
+    margin: 1rem 2.5rem;
+  }
+  .whyUs .cardItem .cardItem-textWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: left;
+    margin: 0 1rem;
+  }
+  .whyUs .cardItem .cardItem-textWrap h4 {
+    margin: 0;
+  }
+  .whyUs .truckImg {
+    height: auto;
+    width: 57px;
+  }
+  .howItWorks {
+    margin: 10rem 3rem 6rem 3rem;
+    padding-top: 4rem;
+  }
+  .howItWorksWrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+    margin-bottom: -4rem;
+    position: relative;
+    top: -97px;
+  }
+  .howItWorksItem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    padding: 0;
+  }
+  .howItWorksItem h1 {
+    margin: 3.5rem 0 2.75rem 0;
+  }
+  .howItWorksItem h3 {
+    max-width: 95%;
+    margin: 0 0 1rem 0;
+  }
+  .accentLine {
+    height: 2px;
+    width: 34rem;
+    margin: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .ourCollection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1rem;
+    margin: 5rem 2.5rem;
+    max-width: 100vw;
+  }
+  .ourCollection h1 {
+    font-size: 6.25rem;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-width: 100vw;
+  }
+  .ourCollection .altTitleGradient {
+    top: 45rem;
+    line-height: 5rem;
+  }
+  .ourCollection .collectionItem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+    gap: .5rem;
+    margin: 3.5rem 1rem;
+    max-height: 10rem;
+    max-width: 90vw;
+  }
+  .ourCollection img {
+    max-width: 40vw;
+  }
+  .ourCollection h4 {
+    margin: 0;
+  }
+  .ourCollection p {
+    padding: 0;
+  }
+  .ourCollection .item-textWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 30vw;
+  }
+  .whyUs {
+    margin: 0 5rem 20rem 5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-height: auto;
+  }
+  .whyUs .whyUsDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem 2.25rem 0 2.25rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whyUs .cardWrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 1fr 1fr / 1fr;
+    gap: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 3rem;
+  }
+  .whyUs .cardItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    padding: 3rem 1rem;
+    position: relative;
+    bottom: -15%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whyUs .cardItem img {
+    max-width: 55px;
+    max-height: 55px;
+    margin: 1rem 2.5rem;
+  }
+  .whyUs .cardItem .cardItem-textWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: left;
+    margin: 0 1rem;
+  }
+  .whyUs .cardItem .cardItem-textWrap h4 {
+    margin: 0;
+  }
+  .whyUs .truckImg {
+    height: auto;
+    width: 57px;
+  }
+  .howItWorks {
+    margin: 10rem 1.75rem 6rem 1.75rem;
+    padding-top: 4rem;
+  }
+  .howItWorksWrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+    margin-bottom: -4rem;
+    position: relative;
+    top: -97px;
+  }
+  .howItWorksItem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    padding: 0;
+  }
+  .howItWorksItem h1 {
+    margin: 3.5rem 0 2.75rem 0;
+  }
+  .howItWorksItem h3 {
+    max-width: 95%;
+    margin: 0 0 1rem 0;
+  }
+  .accentLine {
+    height: 2px;
+    width: 32rem;
+    margin: 5rem 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
