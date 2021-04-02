@@ -34,7 +34,7 @@
     .heroButton{
         margin-left: 5.25rem;
         margin-top: 3.75rem;
-        max-width: 50%;
+        max-width: 40%;
     }
 
 @media screen and (max-width: 850px){
@@ -95,5 +95,6 @@
     .heroButton{
         max-width: 65%;
         margin-top: 1rem;
+        font-size: 1rem;
     }
 }

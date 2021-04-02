@@ -59,7 +59,8 @@ body{
     background-color: $color-darkCyan;
     border-radius: 6px;
     border: none;
-    padding: 1rem 2.5rem;
+    padding: 1rem 1.75rem;
+    cursor: pointer;
 }
 
 .mainButton:hover{

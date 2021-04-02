@@ -1,0 +1,423 @@
+.mobileImg{
+    display: none;
+}
+
+.desktopImg{
+    display: block;
+}
+
+.tabletImg{
+    display: none;
+}
+
+//About hero banner
+.about_hero{
+    background-image: url(/assets/about/desktop/image-hero-whitecup.jpg);
+    background-size: 100%;
+    object-fit: fill;
+    background-repeat: none;
+    border-radius: 10px;
+    margin: 0 5rem;
+}
+
+.about_heroText{
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: start;
+    margin-left: 5.25rem;
+    color: white;
+    max-width: 35%;
+    padding: 9rem 0;
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        max-width: 80%;
+    }
+}
+
+// Commitment Section
+.commitment{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7rem 5rem;
+    justify-content: space-around;
+    align-items: center;
+
+    img{
+        border-radius: 10px;
+    }
+}
+.commitment_text{
+    text-align: left;
+    padding: 4rem 4rem 4rem 0;
+    max-width: 50%;
+}
+//Quality section
+.quality{
+    background-image: url(/assets/about/desktop/bg-quality.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 0 5rem 3rem 5rem;
+    color: white;
+    text-align: left;
+    max-height: 474px;
+    justify-content: center;
+    
+
+    .quality_wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    transform: translateY(-15%);
+
+        .quality_text{
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 3rem;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            p{
+                max-width: 33.75rem;
+            }
+        }
+
+        img{
+            border-radius: 10px;
+        }
+    }
+}
+
+//Headquarters section
+.headquarters{
+    margin: 3rem 12.8rem 10rem 12.8rem;
+    padding-top: 2rem;
+
+    h4{
+        color: $color-grey;
+    }
+}
+
+.headquarters_wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 1rem 10rem;
+    position: relative;
+}
+
+.region{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    padding-right: 5rem;
+
+        h4{
+            margin: 0 0 1rem 0;
+            color: $color-grey;
+        }
+
+        p{
+        color: $color-darkGreyBlue;
+        padding: .25rem 0 0 0;
+        margin: 0;
+        }
+
+        img{
+            max-height: 3.125rem;
+            max-width: 3.125rem;
+            margin: 3rem 0 3rem 0;
+        }
+}  
+
+@media screen and (max-width: 850px){
+    .mobileImg{
+        display: none;
+    }
+    .tabletImg{
+        display: block;
+    }
+    .desktopImg{
+        display: none;
+    }
+
+ //About hero banner
+.about_hero{
+    background-image: url(/assets/about/tablet/image-hero-whitecup.jpg);
+    background-size: 100%;
+    object-fit: fill;
+    background-repeat: none;
+    border-radius: 10px;
+    margin: 0 1rem;
+}
+
+.about_heroText{
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: start;
+    margin-left: 4.25rem;
+    color: white;
+    max-width: 75%;
+    padding: 5rem 0;
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        max-width: 80%;
+    }
+}
+
+// Commitment Section
+.commitment{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 3rem 1rem;
+    justify-content: center;
+    align-items: flex-start;
+
+    img{
+        border-radius: 10px;
+        margin: 0;
+        padding: 0;
+    }
+}
+.commitment_text{
+    text-align: left;
+    padding: 0 0 0 3rem;
+    margin: 0;
+    max-width: 100%;
+
+    h2{
+        margin-top: 1.5rem;
+    }
+}
+//Quality section
+.quality{
+    background-image: url(/assets/about/tablet/bg-quality.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 17rem 1rem 3rem 1rem;
+    color: white;
+    text-align: center;
+    max-height: 474px;
+    justify-content: center;
+    
+
+    .quality_wrapper{
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    transform: translateY(-25%);
+
+        .quality_text{
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 3rem;
+            align-items: center;
+            justify-content: flex-start;
+
+            h2{
+                margin: 0;
+            }
+
+            p{
+                margin-top: 1.5rem;
+                max-width: 90%;
+            }
+        }
+
+        img{
+            border-radius: 10px;
+        }
+    }
+}
+
+//Headquarters section
+.headquarters{
+    margin: 3rem 3rem 7rem 3rem;
+    padding-top: 2rem;
+
+    h4{
+        color: $color-grey;
+    }
+}
+
+.headquarters_wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 1rem 5rem;
+    position: relative;
+}
+
+.region{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    padding-right: 0;
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+        p{
+        color: $color-darkGreyBlue;
+        padding: .25rem 0 0 0;
+        margin: 0;
+        }
+
+        img{
+            max-height: 3.125rem;
+            max-width: 3.125rem;
+            margin: 3rem 0 3rem 0;
+        }
+    }  
+}
+
+@media screen and (max-width: 499px){
+
+.mobileImg{
+    display: block;
+}
+.tabletImg{
+    display: none;
+}
+.desktopImg{
+    display: none;
+}
+
+    //About hero banner
+.about_hero{
+    background-image: url(/assets/about/mobile/image-hero-whitecup.jpg);
+    background-size: 105%;
+    margin: 0 1rem;
+
+    img:after{
+        background:rgba(0,0,0,0.6);
+        opacity: .5;
+    }
+    
+    p{
+        min-width: 90%;
+        margin-top: 0;
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+}
+
+.about_heroText{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    margin: 0; 
+}
+
+// Commitment Section
+.commitment{
+    flex-flow: column nowrap;
+    margin: 7rem 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    img{
+        max-width: 18rem;
+    }
+    
+}
+
+.commitment_text{
+    text-align: center;
+    padding: 1rem 0;
+    max-width: 100%;
+
+    h2{
+        font-size: 2rem;
+    }
+}
+
+    .quality{
+        background-image: url(/assets/about/mobile/bg-quality.png);
+        margin: 3rem 1rem;
+        text-align: center;
+        max-height: 587px;
+        justify-content: center;
+        
+    
+        .quality_wrapper{
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        justify-content: center;
+        align-items: center;
+        
+        transform: translateY(-15%);
+    
+            .quality_text{
+                display: flex;
+                flex-flow: column nowrap;
+                padding: 2rem 1rem 0 1rem;
+                align-items: center;
+                justify-content: center;
+
+                h2{
+                    font-size: 1.75rem;
+                    line-height: 2rem;
+                    margin-bottom: 0;
+                }
+                p{
+                    font-size: .9rem;
+                }
+            }
+    
+            img{
+                border-radius: 10px;
+                max-width: 16rem;
+            }
+        }
+    }
+
+    .headquarters{
+        margin: 3rem 1rem;
+        text-align: center;
+        .headquarters_wrapper{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            gap: 1rem;
+            position: relative;
+
+            .region{
+                padding: 2rem 0;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    max-height: 3.125rem;
+                    max-width: 3.125rem;
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+    
+}

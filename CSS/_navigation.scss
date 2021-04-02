@@ -1,7 +1,7 @@
 .hamburger{
     background-color: transparent;
     border: 0;
-    color: $color-grey;
+    color: $color-darkGreyBlue;
     font-size: 1.25rem;
     cursor: pointer;
     display: none;
@@ -20,6 +20,10 @@ display: flex;
 flex-flow: row nowrap;
 justify-content: space-between;
 align-items: center;
+
+    img{
+        max-width: 14.68rem;
+    }
 }
 
 .nav-ul{
@@ -69,8 +73,13 @@ align-items: center;
     }
 }
 
+@media screen and (max-width: 799px){
+    header{
+        margin: 2.5rem;
+    }
+}
 
-@media screen and (max-width: 999px){
+@media screen and (max-width: 499px){
     header{
         margin: 1.5rem;
     }
@@ -84,6 +93,9 @@ align-items: center;
             font-size: 1.25rem;
             line-height: 2rem;
             font-weight: normal;
+        }
+        img{
+            max-width: 10.2rem;
         }
     }
     .nav-ul{
