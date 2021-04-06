@@ -1,0 +1,46 @@
+.modal{
+    margin: 1.5rem;
+    // position: fixed;
+    background-color: rgba( 0,0,0,0.4);
+    position: fixed;
+    z-index: 1;
+    display: none;
+    
+
+    .modal-content{
+        background-color: white;
+        width: 50%;
+        margin: auto;
+        padding: 0;
+        border-radius: 10px;
+
+        
+    }
+    .modalTitle{
+        background-color: $color-darkGreyBlue;
+        padding: 2rem 1rem;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        h2{
+            font-size: 2rem;
+            padding: 0 2rem;
+        }
+        
+        
+    }
+    p{
+        padding: 0 2rem;
+    }
+    h3{
+        color: $color-darkGreyBlue;
+        padding: 0 2rem;
+    }
+    .modal-results{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 2rem 0;
+    }
+}

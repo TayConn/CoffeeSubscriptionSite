@@ -61,6 +61,7 @@ body{
     border: none;
     padding: 1rem 1.75rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .mainButton:hover{
@@ -69,23 +70,4 @@ body{
 
 .mainButton:disabled{
     background-color: #E2DEDB;
-}
-
-//Selection styles
-.bigSelectionOption:Default{
-    background-color: #F4F1EB;
-    color: $color-darkGreyBlue;
-    border-radius: 8px;
-    padding: 1rem;
-    max-width: 14.25rem;
-    max-height: 15.63rem;
-}
-
-.bigSelectionOption:Hover{
-    background-color: $color-paleOrange;
-}
-
-.bigSelectionOption:Hover{
-    background-color: $color-darkCyan;
-    color: white;
 }

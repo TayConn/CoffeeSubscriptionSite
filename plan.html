@@ -3,118 +3,275 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
 
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
 
 <body>
-  Home
-  About us
-  Create your plan
+  <header>
+    <nav role="navigation">
+      <img src="/assets/shared/desktop/logo.svg" alt="A logo for Coffeeroasters - green beans with stylized words for Coffeeroasters" class="logo">
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <ul class="nav-ul" id="nav-ul">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About us</a></li>
+        <li><a href="/plan.html">Create your plan</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  Create a plan
-  Build a subscription plan that best fits your needs. We offer an assortment of the best 
-  artisan coffees from around the globe delivered fresh to your door.
+  <section class="plan_hero">
+      <div class="plan_heroText">
+        <h1>
+          Create a plan
+        </h1>
+        <p>
+          Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.
+        </p>
+      </div>
+  </section>
 
-  01
-  Pick your coffee
-  Select from our evolving range of artisan coffees. Our beans are ethically
-  sourced and we pay fair prices for them. There's new coffees in all profiles
-  every month for you to try out.
+  <section class="howItWorks_dark">
+    <div class="accentLine_dark"></div>
+    <div class="howItWorksWrapper">
+      <div class="howItWorksItem_dark">
+        <div class="accentCircle_dark"></div>
+          <h1>
+            01
+          </h1>
+          <h3>
+            Pick your coffee
+          </h3>
+          <p>
+            Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.
+          </p>
+        </div>
+      
+        <div class="howItWorksItem_dark">
+          <div class="accentCircle_dark"></div>
+          <h1>
+            02
+          </h1>
+          <h3>
+            Choose the frequency
+          </h3>
+          <p>
+            Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.
+          </p>
+        </div>
+      
+        <div class="howItWorksItem_dark">
+          <div class="accentCircle_dark"></div>
+          <h1>
+            03
+          </h1>
+          <h3>
+            Receive and enjoy!
+          </h3>
+          <p>
+            We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.
+          </p>
+        </div>
+    </div>
+  </section>
+
+  <div class="coffee_plan_section">
+    <aside class="plan_stage">
+      <div class="plan_stage_item">
+        <p class="plan_num_teal">01</p>
+        <p class="plan_stage_name">Preferences</p></div>
+      <div class="plan_stage_item">
+        <p class="plan_num_teal">02</p>
+        <p class="plan_stage_name">Bean type</p>
+      </div>
+      <div class="plan_stage_item">
+        <p class="plan_num_teal">03</p>
+        <p class="plan_stage_name">Quantity</p>
+      </div>
+      <div class="plan_stage_item">
+        <p class="plan_num_teal">04</p>
+        <p class="plan_stage_name">Grind option</p>
+      </div>
+      <div class="plan_stage_item">
+        <p class="plan_num_teal">05</p>
+        <p class="plan_stage_name">Deliveries</p>
+      </div>
+    </aside>
+
+    <section class="plan_picker">
+    <div class="plan_picker_item">
+      <div class="plan_picker_question">
+        <button class="plan_picker_btn">
+          <h3>How do you drink your coffee?</h3>
+          <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
+        </button>
+      </div>
+      <div class="plan_item_group">
+        <div class="plan_item_option">
+          <h4>Capsule</h4>
+          <p>Compatible with Nespresso systems and similar brewers</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Immsersion</h4>
+          <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Espresso</h4>
+          <p>Dense and finely ground beans for an intense, flavorful experience</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan_picker_item">
+      <div class="plan_picker_question">
+        <button class="plan_picker_btn">
+          <h3>What type of coffee?</h3>
+          <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
+        </button>
+      </div>
+      <div class="plan_item_group">
+        <div class="plan_item_option">
+          <h4>Single origin</h4>
+          <p>Distinct, high quality coffee from a specific family-owned farm</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Decaf</h4>
+          <p>Just like regular coffee, except the caffeine has been removed</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Blended</h4>
+          <p>Combination of two or three dark roasted beans of organic coffees</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan_picker_item">
+      <div class="plan_picker_question">
+        <button class="plan_picker_btn">
+          <h3>How much would you like?</h3>
+          <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
+        </button>
+      </div>
+      <div class="plan_item_group">
+        <div class="plan_item_option">
+          <h4>250g</h4>
+          <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>500g</h4>
+          <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>1000g</h4>
+          <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan_picker_item">
+      <div class="plan_picker_question">
+        <button class="plan_picker_btn">
+          <h3>Want us to grind them?</h3>
+          <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
+        </button>
+      </div>
+      <div class="plan_item_group">
+        <div class="plan_item_option">
+          <h4>Wholebean</h4>
+          <p>Best choice if you cherish the full sensory experience</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Immsersion</h4>
+          <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Cafetiére</h4>
+          <p>Course ground beans specially suited for french press coffee</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan_picker_item">
+      <div class="plan_picker_question"></div>
+      <div class="plan_item_group">
+        <div class="plan_item_option">
+          <h4>Every week</h4>
+          <p>$14.00 per shipment. Includes free first-class shipping.</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Every 2 weeks</h4>
+          <p>$17.25 per shipment. Includes free priority shipping.</p>
+        </div>
+        <div class="plan_item_option">
+          <h4>Every month</h4>
+          <p>$22.50 per shipment. Includes free priority shipping.</p>
+        </div>
+      </div>
+    </div>
+    <div class="order_summary">
+      <div class="order_summary_item">
+        <p class="summary_title_caps">Order Summary</p>
+        <h3>
+          “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+          sent to me _____.”
+        </p>
+      </div>
+      <button class="mainButton">Create my plan!</button>
+    </div>
+    </section>
+  </div>
+
   
-  02
-  Choose the frequency
-  Customize your order frequency, quantity, even your roast style and grind type.
-  Pause, skip or cancel your subscription with no commitment through our online portal.
-  
-  03
-  Receive and enjoy!
-  We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-  world-class coffees curated to provide a distinct tasting experience.
-
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
-
-  How do you drink your coffee?
-
-  Capsule
-  Compatible with Nespresso systems and similar brewers
-
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
-
-  Espresso
-  Dense and finely ground beans for an intense, flavorful experience
-
-  What type of coffee?
-
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
-
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
-  sent to me _____.”
-
-  Create my plan!
 
   <!-- Modal -->
-  Order Summary
-
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
-
-  $_____/month
-
-  Checkout
+  <aside class="modal">
+    <div class="modal-content">
+      <div class="modalTitle">
+        <h2>Order Summary</h2>
+      </div>
+      <h3>
+        “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+        sent to me _____.”
+      </h3>
+      <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
+      <div class="modal-results">
+        <p> $_____/month</p>
+        <a href="#" class="mainButton">Checkout</a>
+      </div>
+    </div>
+  </aside>
   <!-- End modal -->
 
-  Home
-  About us
-  Create your plan
+  <footer>
+    <div class="footerWrapper">
+      <img class="footerLogo" src="/assets/shared/desktop/logo-white.svg" alt="A logo for Coffeeroasters - green beans with stylized words for Coffeeroasters" class="logo">
+      <div>
+        <ul  class="footerNavLinks">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/plan.html">Create your plan</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="socialLinks">
+          <li>
+            <a href="#"><img src="/assets/shared/desktop/icon-facebook.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="/assets/shared/desktop/icon-twitter.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="/assets/shared/desktop/icon-instagram.svg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

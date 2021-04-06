@@ -101,6 +101,14 @@
         padding-top: 2rem;
     }
 
+    .howItWorks_dark{
+        margin: 10rem 12.8rem 6rem 12.8rem;
+        padding-top: 2rem;
+        background-color: $color-darkGreyBlue;
+        border-radius: 10px;
+        
+    }
+
     .howItWorksWrapper{
         display: flex;
         flex-flow: row nowrap;
@@ -126,11 +134,34 @@
             h3{
                 max-width: 70%;
                 margin: 0;
+                color: $color-darkGreyBlue;
             }
             p{
             color: $color-darkGreyBlue;
             }
     }  
+
+    .howItWorksItem_dark{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+
+        padding: 0 3rem;
+
+            h1{
+            color: $color-paleOrange;
+            margin: 3.5rem 0 2.75rem 0;
+            }
+
+            h3{
+                max-width: 70%;
+                margin: 0;
+                color: white;
+            }
+            p{
+                color: white;
+            }
+    }
 
     .accentCircle{
         width: 31px;
@@ -142,7 +173,26 @@
         z-index: 1;
     }
 
+    .accentCircle_dark{
+        width: 31px;
+        height: 31px;
+        background-color: none;
+        border: 2px solid $color-darkCyan;
+        border-radius: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
     .accentLine{
+        height: 2px;
+        color: $color-paleOrange;
+        width: 870px;
+        z-index: -1;
+        border: 2px solid $color-paleOrange;
+        margin: 6.25rem 3.5rem;
+    }
+
+    .accentLine_dark{
         height: 2px;
         color: $color-paleOrange;
         width: 870px;
@@ -326,6 +376,12 @@
             margin: 10rem 3rem 6rem 3rem;
             padding-top: 4rem;
         }
+
+        .howItWorks_dark{
+            margin: 10rem 3rem 6rem 3rem;
+            padding-top: 4rem;
+            background-image: url(/assets/plan/desktop/bg-steps.png);
+        }
     
         .howItWorksWrapper{
             flex-flow: row nowrap;
@@ -341,6 +397,7 @@
             flex-flow: column wrap;
             justify-content: baseline;
             padding: 0;
+            
     
                 h1{
                 margin: 3.5rem 0 2.75rem 0;
@@ -350,12 +407,34 @@
                     margin: 0 0 1rem 0;
                 }
                
-        }  
+        } 
+        .howItWorksItem_dark{
+            flex-flow: column wrap;
+            justify-content: baseline;
+            padding: 0;
+            min-height: 10rem;
+    
+                h1{
+                margin: 3.5rem 0 2.75rem 0;
+                color: white;
+                }
+                h3{
+                    max-width: 95%;
+                    margin: 0 0 1rem 0;
+                    color: white;
+                }
+               
+        } 
     
         .accentLine{
             height: 2px;
             width: 34rem;
             margin: 5rem 0;
+        }
+        .accentLine_dark{
+            height: 2px;
+            width: 34rem;
+            margin: 1rem 0 5rem 0;
         }
     }
 
@@ -480,12 +559,32 @@
         .howItWorks{
             margin: 10rem 1.75rem 6rem 1.75rem;
             padding-top: 4rem;
+
+            h1{
+                color: $color-paleOrange;
+            }
+
+            h3{
+                color: $color-darkGreyBlue;
+            }
+
+            p{
+                color: $color-darkGreyBlue;
+            }
+        }
+
+        .howItWorks_dark{
+            margin: 10rem 0 6rem 0;
+            padding-top: 4rem;
+            background-image: url(/assets/plan/tablet/bg-steps.png);
+            border-radius: 0;
+            max-height: 35rem;
         }
     
         .howItWorksWrapper{
             flex-flow: row nowrap;
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
             margin-bottom: -4rem;
     
             position: relative;
@@ -506,11 +605,36 @@
                 }
                
         }  
+
+        .howItWorksItem_dark{
+            flex-flow: column wrap;
+            justify-content: baseline;
+            padding: 0 1rem;
+    
+                h1{
+                margin: 3.5rem 0 2.75rem 0;
+                color: white;
+                }
+                h3{
+                    max-width: 95%;
+                    margin: 0 0 1rem 0;
+                    color: white;
+                }
+                p{
+                    font-size: .8rem;
+                }
+               
+        }
     
         .accentLine{
             height: 2px;
             width: 32rem;
             margin: 5rem 0;
+        }
+        .accentLine_dark{
+            height: 2px;
+            width: 33.5rem;
+            margin: 1rem 0 5rem 1.9rem;
         }
 
         //footer
@@ -651,20 +775,40 @@
             margin: 32rem 1.75rem 6rem 1.75rem;
             padding-top: 4rem;
             text-align: center;
+
+            h1{
+                color: $color-paleOrange;
+            }
+
+            h3{
+                color: $color-darkGreyBlue;
+            }
+
+            p{
+                color: $color-darkGreyBlue;
+            }
+        }
+
+        .howItWorks_dark{
+            margin: 4rem 0 2rem 0;
+            padding-top: 1rem;
+            text-align: center;
+            border-radius: 0;
+            max-height: 58rem;
+            background-image: url(/assets/plan/mobile/bg-steps.png);
         }
     
         .howItWorksWrapper{
             flex-flow: column nowrap;
             justify-content: center;
             gap: 2rem;
-            margin-top: 9rem;
+            margin-top: 8rem;
             margin-bottom: -4rem;
         }
     
         .howItWorksItem{
             flex-flow: column nowrap;
             justify-content: center;
-            padding: 0;
             
     
                 h1{
@@ -676,11 +820,36 @@
                 }
                
         }  
+
+        .howItWorksItem_dark{
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-self: center;
+            max-width: 100%;
+            
+    
+                h1{
+                margin: 0rem 0 2rem 0;
+                color: $color-paleOrange;
+                }
+                h3{
+                    max-width: 100%;
+                    margin: 0 0 1rem 0;
+                }
+               
+        } 
     
         .accentLine{
             display: none;
         }
+        .accentLine_dark{
+            display: none;
+        }
         .accentCircle{
+            display: none;
+        }
+
+        .accentCircle_dark{
             display: none;
         }
 

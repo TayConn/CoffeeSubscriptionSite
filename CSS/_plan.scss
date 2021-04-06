@@ -1,0 +1,369 @@
+// Plan hero banner
+.plan_hero{
+    background-image: url(/assets/plan/desktop/image-hero-blackcup.jpg);
+    background-size: 100%;
+    object-fit: fill;
+    background-repeat: none;
+    border-radius: 10px;
+    margin: 0 5rem;
+}
+
+.plan_heroText{
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: start;
+    margin-left: 5.25rem;
+    color: white;
+    max-width: 35%;
+    padding: 5rem 0;
+
+    h1{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        max-width: 80%;
+    }
+}
+
+//coffe plan selection section 
+.coffee_plan_section{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 5rem 15rem;
+    gap: 3rem;
+    justify-content: space-around;
+}
+
+.plan_stage{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    min-width: 9rem;
+    // margin-left: 10rem;
+
+    .plan_stage_item{
+        border-bottom: 1px solid #E2DEDB;
+        display: flex;
+        flex-flow: row wrap;
+        color: #E2DEDB;
+        
+    }
+    .plan_stage_item:active{
+        color: $color-grey;
+    }
+
+    .plan_num_teal{
+        color: $color-darkCyan;
+    }
+
+    .plan_stage_name{
+        padding-left: 1.25rem;
+        color: $color-grey;
+    }
+}
+
+.plan_picker{
+    margin: 0 2rem 0 7rem;
+
+    .plan_picker_item{
+        display: flex;
+        flex-flow: column nowrap;
+
+        h3{
+            color: $color-grey;
+        }
+    }
+    .plan_item_group{
+        display:none;
+    }
+    .open .plan_item_group{
+        display:flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .plan_item_option{
+        background-color: #F4F1EB;
+        color: $color-darkGreyBlue;
+        border-radius: 10px;
+        max-width: 32%;
+        padding: 2rem 1rem 2rem 2rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        p{
+            max-width: 80%;
+        }
+        h4{
+            margin: 0;
+        }
+    }
+
+    .plan_item_option:hover{
+        background-color: $color-paleOrange;
+    }
+
+    .plan_item_option:active{
+        background-color: $color-darkCyan;
+        color: white;
+    }
+        .order_summary{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        }
+        .order_summary_item{
+        background-color: $color-darkGreyBlue;
+        border-radius: 10px;
+        margin: 3rem 0;
+        padding: 3rem;
+        h3{
+            color:white;
+        }
+        .summary_title_caps{
+            text-transform: uppercase;
+            color: $color-grey
+        }
+    }
+    .plan_picker_question{
+        display: flex;
+       
+    }
+    //arrow transition
+    $transition: all 0.2s ease-in;
+    
+    .arrow{
+        transition: $transition;
+    }
+
+    .open .arrow{
+        transform: rotate(180deg);
+    }
+
+    .plan_picker_btn{
+        
+        border:none;
+        display: flex;
+        background: transparent; 
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        cursor: pointer;
+    }
+    .plan_picker_btn:hover{
+        background: transparent; 
+    }
+}
+
+
+@media screen and (max-width: 850px){
+    .mobileImg{
+        display: none;
+    }
+    .tabletImg{
+        display: block;
+    }
+    .desktopImg{
+        display: none;
+    }
+
+    .plan_stage{
+        display:none;
+    }
+
+    //About hero banner
+    .plan_hero{
+        background-image: url(/assets/plan/tablet/image-hero-blackcup.jpg);
+        background-size: 100%;
+        object-fit: fill;
+        background-repeat: none;
+        border-radius: 10px;
+        margin: 0 1rem 2rem;
+    }
+
+    .plan_heroText{
+        display: flex; 
+        flex-flow: column nowrap;
+        justify-content: start;
+        margin-left: 2rem;
+        color: white;
+        max-width: 75%;
+        padding: 5rem 0;
+
+        h1{
+            margin-bottom: 1rem;
+            font-size: 4rem;
+        }
+
+        p{
+            max-width: 75%;
+        }
+    }
+
+//coffee plan section
+
+.coffee_plan_section{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2rem 1rem;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+    .plan_picker{
+        margin: 1rem;
+
+        .plan_picker_item{
+            flex-flow: column nowrap;
+        }
+
+        .plan_item_group{
+            display: none;
+        }
+
+        .open .plan_item_group{
+            display:flex;
+            flex-flow: row nowrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .plan_item_option{
+            max-width: 32%;
+            padding: 1rem;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            p{
+                max-width: 95%;
+            }
+            h4{
+                margin: 0;
+            }
+        }
+
+        .order_summary{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            }
+    }
+
+    .order_summary_item{
+        background-color: $color-darkGreyBlue;
+        border-radius: 10px;
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 499px){
+
+    .plan_stage{
+        display:none;
+    }
+
+        //About hero banner
+    .plan_hero{
+        background-image: url(/assets/plan/mobile/image-hero-blackcup.jpg);
+        background-size: 105%;
+        margin: 0 1rem 4rem 1rem;
+
+        img:after{
+            background:rgba(0,0,0,0.6);
+            opacity: .5;
+        }
+        
+        p{
+            min-width: 90%;
+            margin-top: 0;
+            font-size: .9rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    .plan_heroText{
+        display: flex; 
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+        margin: 0; 
+
+        h1{
+            margin-top: 1rem;
+        }
+    }
+//coffee plan section
+
+.coffee_plan_section{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2rem 1rem;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+    .plan_picker{
+        margin: 1rem;
+
+       
+
+        .plan_picker_item{
+            flex-flow: column nowrap;
+
+            h3{
+                max-width: 75%;
+                display: inline-block;
+            }
+        }
+
+        .plan_item_group{
+            display: none;
+        }
+        .open .plan_item_group{
+            display:flex;
+            flex-flow: column nowrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .plan_item_option{
+            max-width: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            p{
+                max-width: 95%;
+            }
+            h4{
+                margin: 0;
+            }
+        }
+
+    .order_summary{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+
+
+
+}
