@@ -74,10 +74,12 @@
             color: $color-grey;
         }
     }
+
     .plan_item_group{
         display:none;
     }
-    .open .plan_item_group{
+
+    .open {
         display:flex;
         flex-flow: row wrap;
         gap: 1rem;
