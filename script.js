@@ -7,69 +7,31 @@ hamburger.addEventListener('click', () => {
 });
 
 
+// const planTest = document.querySelectorAll('plan_item_group');
+const planItemGroup = Array.from(document.querySelectorAll('.plan_item_group'));
 
-// const tabs = document.querySelector('.tabs');
-// const tabButtons = tabs.querySelectorAll('[role="tab"]');
-// const tabPanels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+    //handles click for inside buttons of each section of order sheet
+    function handleOptionClick (event){
+        const selected = event.target.closest('div.plan_item_option');
+        selected.classList.toggle('active');
 
-// function handleTabClick(event) {
-//     tabPanels.forEach(panel => {
-//         panel.hidden = true;
-//     });
+        let currentParent = selected.closest('[role="tab"]')
+        let nextParent = currentParent.nextElementSibling;
 
-//     tabButtons.forEach(tab => {
-//         tab.setAttribute('aria-selected', false);
-//     });
-//     event.currentTarget.setAttribute('aria-selected', true);
+        
+        for (let sibling of selected.parentNode.children){
+            if (sibling != selected) sibling.classList.remove('active');
+        
+        }
 
-//     const { id } = event.currentTarget;
-//     const tabPanel = tabPanels.filter(
-//         panel => panel.getAttribute('aria-labelledby') === id
-//     );
-//     // console.log(tabPanel);
-//     tabPanel.forEach(panel => {
-//         panel.hidden = false;
-
-//     });
-// }
-
-// tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
-
-
-const planSelectionParent1 = document.getElementById('selection1');
-const planSelectionParent2 = document.getElementById('selection2');
-// const planSelection = document.getElementById('selection1');
-const planSelection1 = planSelectionParent1.getElementsByTagName('div');
-const planSelection2 = planSelectionParent2.getElementsByTagName('div');
-
-
-function handleOptionClick (event){
-    const selected = event.target;
-    selected.classList.toggle('active');
-
-    for (let sibling of selected.parentNode.children){
-        if (sibling != selected) sibling.classList.remove('active');
+        if (selected.classList.contains('active')){
+            nextParent.setAttribute('aria-selected', true);
+        } else {
+            nextParent.setAttribute('aria-selected', false);
+        }
     }
-    planSelectionParent2.setAttribute('aria-selected', true); 
-
-}
-
-for (var i = 0; i < planSelection1.length; i++){
-    planSelection1[i].addEventListener('click', handleOptionClick);
-}
+    
+planItemGroup.forEach(group => group.addEventListener('click', handleOptionClick));
 
 
-// if (planSelection1.classList.contains('active')) planSelectionParent2.setAttribute('aria-selected', true); 
-
-// function handleSelection(event){
-//     console.log('button clicked');
-//     const activate = event.target;
-//     console.log(event.target);
-//     console.log(event.currentTarget);
-//     console.log(event.target === event.currentTarget);
-//     activate.classList.toggle('active');
-// }
-
-// planSelection.forEach(function (makeSelection) {
-//     makeSelection.addEventListener('click', handleOptionClick);
-// });
+// orderSummary.innerHTML=`"I drink coffee <span>`+ +`<span>, with a <span>`+ + `type of bean.`+ +` ground ala <span>`+ +`</span>, sent to me <span>`+ +`</span>."`
