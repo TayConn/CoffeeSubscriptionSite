@@ -37,7 +37,7 @@
         max-width: 40%;
     }
 
-@media screen and (max-width: 850px){
+    @media screen and (min-width: 699px) and (max-width: 1024px){
     .hero{
         margin: 0 2.5rem;
         background-image: url(/assets/home/tablet/image-hero-coffeepress.jpg);
@@ -63,7 +63,7 @@
     }
 }
 
-@media screen and (max-width: 499px){
+@media screen and (max-width: 698px){
     .hero{
         margin: 0 1.5rem;
         padding: 3rem 0;

@@ -26,13 +26,17 @@
     }
 }
 
-//coffe plan selection section 
+//coffee plan selection section 
 .coffee_plan_section{
     display: flex;
     flex-flow: row nowrap;
     margin: 5rem 15rem;
     gap: 3rem;
     justify-content: space-around;
+
+    h4{
+        font-size: 1rem;
+    }
 }
 
 .plan_stage{
@@ -53,7 +57,10 @@
         color: $color-grey;
     }
 
-    .plan_num_teal{
+    .plan_num{
+        color: $color-grey;
+    }
+    .plan_num:active{
         color: $color-darkCyan;
     }
 
@@ -66,39 +73,50 @@
 .plan_picker{
     margin: 0 2rem 0 7rem;
 
-    .plan_picker_item{
+    .plan_picker_item[aria-selected="true"]{
         display: flex;
         flex-flow: column nowrap;
 
         h3{
             color: $color-grey;
         }
+
+        .plan_item_group{
+            display:flex;
+            flex-flow: row nowrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .plan_picker_item[aria-selected="false"]{
+        .plan_item_group{
+            display: none;
+        }
     }
 
-    .plan_item_group{
-        display:none;
-    }
+    
 
-    .open {
-        display:flex;
-        flex-flow: row wrap;
-        gap: 1rem;
-        justify-content: space-between;
-        align-items: center;
-    }
+    // .open {
+    //     display:flex;
+    //     flex-flow: row wrap;
+    //     gap: 1rem;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
 
     .plan_item_option{
         background-color: #F4F1EB;
         color: $color-darkGreyBlue;
         border-radius: 10px;
-        max-width: 32%;
-        padding: 2rem 1rem 2rem 2rem;
+        width: 32%;
+        padding: 1.25rem;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: flex-start;
         p{
-            max-width: 80%;
+            max-width: 85%;
         }
         h4{
             margin: 0;
@@ -107,9 +125,10 @@
 
     .plan_item_option:hover{
         background-color: $color-paleOrange;
+        color: $color-darkGreyBlue;
     }
 
-    .plan_item_option:active{
+    .active{
         background-color: $color-darkCyan;
         color: white;
     }
@@ -165,7 +184,7 @@
 }
 
 
-@media screen and (max-width: 850px){
+@media screen and (min-width: 699px) and (max-width: 1024px){
     .mobileImg{
         display: none;
     }
@@ -269,7 +288,7 @@
     }
 }
 
-@media screen and (max-width: 499px){
+@media screen and (max-width: 698px){
 
     .plan_stage{
         display:none;

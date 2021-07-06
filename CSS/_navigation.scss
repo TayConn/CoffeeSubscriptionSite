@@ -73,13 +73,13 @@ align-items: center;
     }
 }
 
-@media screen and (max-width: 799px){
+@media screen and (min-width: 699px) and (max-width: 1024px){
     header{
         margin: 2.5rem;
     }
 }
 
-@media screen and (max-width: 499px){
+@media screen and (max-width: 698px){
     header{
         margin: 1.5rem;
     }
