@@ -15,7 +15,7 @@ const planItemGroup = Array.from(document.querySelectorAll('.plan_item_group'));
         const selected = event.target.closest('div.plan_item_option');
         selected.classList.toggle('active');
 
-        let currentParent = selected.closest('[role="tab"]')
+        let currentParent = selected.closest('.plan_picker_item')
         let nextParent = currentParent.nextElementSibling;
 
         
@@ -33,5 +33,25 @@ const planItemGroup = Array.from(document.querySelectorAll('.plan_item_group'));
     
 planItemGroup.forEach(group => group.addEventListener('click', handleOptionClick));
 
+function handleSelection (){
+    
+    let selectedItems = [...(document.querySelectorAll('div.active>h4'))].map(e=>e.innerHTML);
+    
+    console.log(selectedItems);
 
-// orderSummary.innerHTML=`"I drink coffee <span>`+ +`<span>, with a <span>`+ + `type of bean.`+ +` ground ala <span>`+ +`</span>, sent to me <span>`+ +`</span>."`
+    const howSelection = document.getElementById('howSelection');
+    const typeSelection = document.getElementById('typeSelection');
+    const quantitySelection = document.getElementById('quantitySelection');
+    const grindSelection = document.getElementById('grindSelection');
+    const shippingSelection = document.getElementById('shippingSelection');
+
+    howSelection.innerHTML= selectedItems[0] != undefined ? `${selectedItems[0]}`: `_____`;
+    typeSelection.innerHTML= selectedItems[1] != undefined ? `${selectedItems[1]}`: `_____`;
+    quantitySelection.innerHTML= selectedItems[2] != undefined ? `${selectedItems[2]}`: `_____`;
+    grindSelection.innerHTML= selectedItems[3] != undefined ? `${selectedItems[3]}`: `_____`;
+    shippingSelection.innerHTML= selectedItems[4] != undefined ? `${selectedItems[4]}`: `_____`;
+
+    }
+
+    planItemGroup.forEach(group => group.addEventListener('click', handleSelection));
+

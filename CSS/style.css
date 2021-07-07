@@ -1843,6 +1843,10 @@ footer .footerLogo {
   color: white;
 }
 
+.plan_picker .order_summary_item span {
+  color: #0e8784;
+}
+
 .plan_picker .order_summary_item .summary_title_caps {
   text-transform: uppercase;
   color: #83888f;

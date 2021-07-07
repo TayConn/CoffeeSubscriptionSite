@@ -104,16 +104,16 @@
       </div>
     </aside>
 
-    <section class="plan_picker tabs" role="tablist" aria-label="Coffee Plan Question">
+    <section class="plan_picker tabs" aria-label="Coffee Plan Question">
 
-    <div class="plan_picker_item" role="tab" aria-selected="true" id="tab_how">
+    <div class="plan_picker_item" aria-selected="true" >
       <div class="plan_picker_question">
         <div class="plan_picker_btn">
           <h3>How do you drink your coffee?</h3>
           <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
         </div>
       </div>
-      <div class="plan_item_group" role="tabpanel" aria-labelledby="tab_how">
+      <div class="plan_item_group" id="tab_how">
         <div class="plan_item_option">
           <h4>Capsule</h4>
           <p>Compatible with Nespresso systems and similar brewering methods</p>
@@ -129,14 +129,14 @@
       </div>
     </div>
 
-    <div class="plan_picker_item" role="tab" aria-selected="false" id="tab_type">
+    <div class="plan_picker_item" aria-selected="false" >
       <div class="plan_picker_question">
         <div class="plan_picker_btn">
           <h3>What type of coffee?</h3>
           <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
         </div>
       </div>
-      <div class="plan_item_group" role="tabpanel" aria-labelledby="tab_type">
+      <div class="plan_item_group" id="tab_type">
         <div class="plan_item_option">
           <h4>Single origin</h4>
           <p>Distinct flavor, high quality coffee from a specific family-owned farm</p>
@@ -152,14 +152,14 @@
       </div>
     </div>
 
-    <div class="plan_picker_item" role="tab" aria-selected="false" id="tab_quantity">
+    <div class="plan_picker_item" aria-selected="false">
       <div class="plan_picker_question">
         <div class="plan_picker_btn">
           <h3>How much would you like?</h3>
           <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
         </div>
       </div>
-      <div class="plan_item_group" role="tabpanel" aria-labelledby="tab_quantity">
+      <div class="plan_item_group" id="tab_quantity">
         <div class="plan_item_option">
           <h4>250g</h4>
           <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
@@ -175,14 +175,14 @@
       </div>
     </div>
 
-    <div class="plan_picker_item" role="tab" aria-selected="false" id="tab_grindIt">
+    <div class="plan_picker_item" aria-selected="false" >
       <div class="plan_picker_question">
         <div class="plan_picker_btn">
           <h3>Want us to grind them?</h3>
           <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
         </div>
       </div>
-      <div class="plan_item_group" role="tabpanel" aria-labelledby="tab_grindIt">
+      <div class="plan_item_group" id="tab_grindIt">
         <div class="plan_item_option">
           <h4>Wholebean</h4>
           <p>Best choice if you cherish the full sensory experience</p>
@@ -198,14 +198,14 @@
       </div>
     </div>
 
-    <div class="plan_picker_item" role="tab" aria-selected="false" id="tab_shipping">
+    <div class="plan_picker_item" aria-selected="false" >
       <div class="plan_picker_question">
         <div class="plan_picker_btn">
           <h3>How often should we deliver?</h3>
           <span class="arrow"><img src="/assets/plan/desktop/icon-arrow.svg" alt="a green arrow"></span>
         </div>
       </div>
-      <div class="plan_item_group" role="tabpanel" aria-labelledby="tab_shipping">
+      <div class="plan_item_group" id="tab_shipping">
         <div class="plan_item_option">
           <h4>Every week</h4>
           <p>$14.00 per shipment. Includes free first-class shipping.</p>
@@ -224,8 +224,8 @@
       <div class="order_summary_item">
         <p class="summary_title_caps">Order Summary</p>
         <h3 id="orderSummary">
-          “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-          sent to me _____.”
+          “I drink coffee <span id="howSelection">_____</span>, with a <span id="typeSelection">_____</span> type of bean. <span id="quantitySelection">_____</span> ground ala <span id="grindSelection">_____</span>,
+          sent to me <span id="shippingSelection">_____</span>.”
         </h3>
       </div>
       <button class="mainButton">Create my plan!</button>
