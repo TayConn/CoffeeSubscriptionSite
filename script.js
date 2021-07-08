@@ -10,6 +10,16 @@ hamburger.addEventListener('click', () => {
 // const planTest = document.querySelectorAll('plan_item_group');
 const planItemGroup = Array.from(document.querySelectorAll('.plan_item_group'));
 
+let arrow = document.querySelector('.arrow');
+const activeTab = document.querySelectorAll('.plan_picker_item');
+
+        if(activeTab.ariaSelected = true){
+            arrow.classList.add('arrowOpen');
+        } else {
+            arrow.classList.remove('arrowOpen');
+        }
+    console.log(activeTab);
+
     //handles click for inside buttons of each section of order sheet
     function handleOptionClick (event){
         const selected = event.target.closest('div.plan_item_option');
@@ -17,26 +27,24 @@ const planItemGroup = Array.from(document.querySelectorAll('.plan_item_group'));
 
         let currentParent = selected.closest('.plan_picker_item')
         let nextParent = currentParent.nextElementSibling;
-        console.log(currentParent);
-        
+
         for (let sibling of selected.parentNode.children){
             if (sibling != selected) sibling.classList.remove('active');
-        
+        }
+
+        if (currentParent.ariaSelected = true){
+            const id = event.currentTarget.id;
+            let planNumberPanel = document.querySelector(`[aria-labelledby="${id}"]`);
+            planNumberPanel.classList.toggle('active');
         }
 
         if (selected.classList.contains('active')){
             nextParent.setAttribute('aria-selected', true);
+           
         } else {
             nextParent.setAttribute('aria-selected', false);
         }
 
-        const {id} = event.currentTarget.id;
-
-        if (currentParent.ariaSelected = true){
-            let planNumberPanel = document.querySelector(`[aria-labelledby="${id}"]`);
-            console.log(planNumberPanel);
-            console.log(id);
-        }
     }
     
 planItemGroup.forEach(group => group.addEventListener('click', handleOptionClick));

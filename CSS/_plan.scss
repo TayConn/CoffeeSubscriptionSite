@@ -50,19 +50,19 @@
         border-bottom: 1px solid #E2DEDB;
         display: flex;
         flex-flow: row wrap;
-        color: #E2DEDB;
+        color: $color-grey;
         
     }
-    .plan_stage_item:active{
-        color: $color-grey;
+    .active{
+        .plan_stage_name{
+            color: $color-darkGreyBlue;
+        }
+        .plan_num{
+            color: $color-darkCyan;
+        }
     }
 
-    .plan_num{
-        color: $color-grey;
-    }
-    .plan_num:active{
-        color: $color-darkCyan;
-    }
+  
 
     .plan_stage_name{
         padding-left: 1.25rem;
@@ -153,13 +153,13 @@
        
     }
     //arrow transition
-    $transition: all 0.2s ease-in;
+    $transition: all 0.2s ease-in-out;
     
     .arrow{
         transition: $transition;
     }
 
-    .open .arrow{
+    .arrowOpen{
         transform: rotate(180deg);
     }
 

@@ -1718,18 +1718,14 @@ footer .footerLogo {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  color: #E2DEDB;
-}
-
-.plan_stage .plan_stage_item:active {
   color: #83888f;
 }
 
-.plan_stage .plan_num {
-  color: #83888f;
+.plan_stage .active .plan_stage_name {
+  color: #2C343E;
 }
 
-.plan_stage .plan_num:active {
+.plan_stage .active .plan_num {
   color: #0e8784;
 }
 
@@ -1863,11 +1859,11 @@ footer .footerLogo {
 }
 
 .plan_picker .arrow {
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.plan_picker .open .arrow {
+.plan_picker .arrowOpen {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
