@@ -78,7 +78,7 @@
         flex-flow: column nowrap;
 
         h3{
-            color: $color-grey;
+            color: $color-darkGreyBlue;
         }
 
         .plan_item_group{
@@ -90,6 +90,9 @@
         }
     }
     .plan_picker_item[aria-selected="false"]{
+        h3{
+            color: $color-grey;
+        }
         .plan_item_group{
             display: none;
         }

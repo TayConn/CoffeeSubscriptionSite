@@ -246,7 +246,7 @@ nav img {
 }
 
 .nav-ul a:hover {
-  color: #fdd6ba;
+  color: #2C343E;
 }
 
 .nav-ul ul {
@@ -1753,7 +1753,7 @@ footer .footerLogo {
 }
 
 .plan_picker .plan_picker_item[aria-selected="true"] h3 {
-  color: #83888f;
+  color: #2C343E;
 }
 
 .plan_picker .plan_picker_item[aria-selected="true"] .plan_item_group {
@@ -1771,6 +1771,10 @@ footer .footerLogo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.plan_picker .plan_picker_item[aria-selected="false"] h3 {
+  color: #83888f;
 }
 
 .plan_picker .plan_picker_item[aria-selected="false"] .plan_item_group {

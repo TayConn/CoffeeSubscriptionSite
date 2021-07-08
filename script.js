@@ -17,7 +17,7 @@ const planItemGroup = Array.from(document.querySelectorAll('.plan_item_group'));
 
         let currentParent = selected.closest('.plan_picker_item')
         let nextParent = currentParent.nextElementSibling;
-
+        console.log(currentParent);
         
         for (let sibling of selected.parentNode.children){
             if (sibling != selected) sibling.classList.remove('active');
@@ -29,6 +29,14 @@ const planItemGroup = Array.from(document.querySelectorAll('.plan_item_group'));
         } else {
             nextParent.setAttribute('aria-selected', false);
         }
+
+        const {id} = event.currentTarget.id;
+
+        if (currentParent.ariaSelected = true){
+            let planNumberPanel = document.querySelector(`[aria-labelledby="${id}"]`);
+            console.log(planNumberPanel);
+            console.log(id);
+        }
     }
     
 planItemGroup.forEach(group => group.addEventListener('click', handleOptionClick));
@@ -36,8 +44,6 @@ planItemGroup.forEach(group => group.addEventListener('click', handleOptionClick
 function handleSelection (){
     
     let selectedItems = [...(document.querySelectorAll('div.active>h4'))].map(e=>e.innerHTML);
-    
-    console.log(selectedItems);
 
     const howSelection = document.getElementById('howSelection');
     const typeSelection = document.getElementById('typeSelection');
