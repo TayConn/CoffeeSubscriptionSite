@@ -186,19 +186,19 @@
     .accentLine{
         height: 2px;
         color: $color-paleOrange;
-        width: 870px;
+        // width: 870px;
         z-index: -1;
         border: 2px solid $color-paleOrange;
-        margin: 6.25rem 3.5rem;
+        // margin: 6.25rem 3.5rem;
     }
 
     .accentLine_dark{
         height: 2px;
         color: $color-paleOrange;
-        width: 54vw;
+        // min-width: 15vw;
         z-index: -1;
         border: 2px solid $color-paleOrange;
-        margin: 6.25rem 4rem;
+        // margin: 6.25rem 18vw 6.25rem 4.25vw;
     }
 
     //footer
@@ -253,6 +253,26 @@
                 .footerLogo{
                     justify-self: flex-start;
                 }
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1920px){
+        .accentLine{
+            height: 2px;
+            color: $color-paleOrange;
+            width: 870px;
+            z-index: -1;
+            border: 2px solid $color-paleOrange;
+            margin: 6.25rem 3.5rem;
+        }
+    
+        .accentLine_dark{
+            height: 2px;
+            color: $color-paleOrange;
+            min-width: 15vw;
+            z-index: -1;
+            border: 2px solid $color-paleOrange;
+            margin: 6.25rem 18vw 6.25rem 4.25vw;
+        }
     }
 
     @media screen and (min-width: 699px) and (max-width: 1024px){

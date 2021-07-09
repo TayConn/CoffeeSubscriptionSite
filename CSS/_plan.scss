@@ -2,7 +2,7 @@
 .plan_hero{
     background-image: url(/assets/plan/desktop/image-hero-blackcup.jpg);
     background-size: 100%;
-    object-fit: fill;
+    object-fit: cover;
     background-repeat: none;
     border-radius: 10px;
     margin: 0 5rem;
@@ -30,7 +30,7 @@
 .coffee_plan_section{
     display: flex;
     flex-flow: row nowrap;
-    margin: 5rem 15rem;
+    margin: 5rem 14rem;
     gap: 3rem;
     justify-content: space-around;
 
@@ -71,12 +71,16 @@
 }
 
 .plan_picker{
-    margin: 0 2rem 0 7rem;
+    margin-left: 3vw;
+
+    .plan_picker_item{
+        margin-bottom: 1rem;
+    }
 
     .plan_picker_item[aria-selected="true"]{
         display: flex;
         flex-flow: column nowrap;
-
+        
         h3{
             color: $color-darkGreyBlue;
         }
@@ -84,9 +88,9 @@
         .plan_item_group{
             display:flex;
             flex-flow: row nowrap;
-            gap: 2rem;
+            gap: 1rem;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
         }
     }
     .plan_picker_item[aria-selected="false"]{
@@ -103,13 +107,15 @@
         color: $color-darkGreyBlue;
         border-radius: 10px;
         width: 32%;
+        max-height: 100%;
         padding: 1.25rem;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
         p{
-            max-width: 85%;
+            // max-width: 90%;
+            font-size: .8rem;
         }
         h4{
             margin: 0;
