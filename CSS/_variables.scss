@@ -22,12 +22,14 @@ body{
         font-family: $font-title;
         font-size: 4.5rem;
         line-height: 4.5rem;
+        font-weight: 900;
     }
 
     h2{
         font-family: $font-title;
         font-size: 2.5rem;
         line-height: 3rem;
+        font-weight: 900;
     }
 
     h3{
@@ -70,4 +72,13 @@ body{
 
 .mainButton:disabled{
     background-color: #E2DEDB;
+}
+
+@media screen and (max-width: 698px){
+    .mainButton{
+        
+        padding: 1rem 1.75rem;
+        cursor: pointer;
+        text-decoration: none;
+    }
 }

@@ -35,6 +35,10 @@
         margin-left: 5.25rem;
         margin-top: 3.75rem;
         max-width: 40%;
+        a{
+            font-family: $font-title;
+            font-weight: 700;
+        }
     }
 
     @media screen and (min-width: 699px) and (max-width: 1024px){
@@ -54,12 +58,14 @@
         h1{
             font-size: 3rem;
             max-width: 75%;
+            line-height: 3rem;
         }
     }
 
     .heroButton{
         margin-left: 3.5rem;
         margin-top: 1rem;
+        max-width: 45%;
     }
 }
 
@@ -67,34 +73,39 @@
     .hero{
         margin: 0 1.5rem;
         padding: 3rem 0;
-        // background-size: 220%;
-        // background-position: bottom right;
         background-image: linear-gradient(to bottom,rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url(/assets/home/mobile/image-hero-coffeepress.jpg);
     }
     .heroContent{
         max-width: 100%;
         padding-bottom: 1rem;
         justify-content: center;
+        align-items: center;
     }
     .heroText{
-        margin: 0 2rem;
+        margin: 0 2rem 1rem 2rem;
         justify-content: center;
+        align-content: center;
         text-align: center;
 
         h1{
-            font-size: 2.5rem;
-            line-height: 2.5rem;
-            max-width: 100%;
+            font-size: 4rem;
+            line-height: 4.5rem;
+            min-width: 100%;
+            margin-bottom: 2rem;
         }
         p{
+            font-size: 1.25rem;
+            line-height: 2rem;
             margin-top: 0;
-            max-width: 100%;
+            min-width: 100%;
         }
     }
 
     .heroButton{
-        max-width: 65%;
+        text-align: center;
+        max-width: 40%;
         margin-top: 1rem;
         font-size: 1rem;
+        margin: 0 2rem;
     }
 }
