@@ -683,6 +683,25 @@ footer .footerLogo {
   justify-self: flex-start;
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
+  .accentLine {
+    height: 2px;
+    color: #fdd6ba;
+    width: 870px;
+    z-index: -1;
+    border: 2px solid #fdd6ba;
+    margin: 6.25rem 3.5rem;
+  }
+  .accentLine_dark {
+    height: 2px;
+    color: #fdd6ba;
+    min-width: 15vw;
+    z-index: -1;
+    border: 2px solid #fdd6ba;
+    margin: 6.25rem 18vw 6.25rem 4.25vw;
+  }
+}
+
 @media screen and (min-width: 699px) and (max-width: 1024px) {
   .ourCollection {
     display: -webkit-box;
@@ -1725,8 +1744,8 @@ footer .footerLogo {
 .plan_hero {
   background-image: url(/assets/plan/desktop/image-hero-blackcup.jpg);
   background-size: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-repeat: none;
   border-radius: 10px;
   margin: 0 5rem;
@@ -1765,7 +1784,7 @@ footer .footerLogo {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  margin: 5rem 15rem;
+  margin: 5rem 14rem;
   gap: 3rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -1796,18 +1815,14 @@ footer .footerLogo {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  color: #E2DEDB;
-}
-
-.plan_stage .plan_stage_item:active {
   color: #83888f;
 }
 
-.plan_stage .plan_num {
-  color: #83888f;
+.plan_stage .active .plan_stage_name {
+  color: #2C343E;
 }
 
-.plan_stage .plan_num:active {
+.plan_stage .active .plan_num {
   color: #0e8784;
 }
 
@@ -1817,7 +1832,11 @@ footer .footerLogo {
 }
 
 .plan_picker {
-  margin: 0 2rem 0 7rem;
+  margin-left: 3vw;
+}
+
+.plan_picker .plan_picker_item {
+  margin-bottom: 1rem;
 }
 
 .plan_picker .plan_picker_item[aria-selected="true"] {
@@ -1842,13 +1861,13 @@ footer .footerLogo {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  gap: 2rem;
+  gap: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .plan_picker .plan_picker_item[aria-selected="false"] h3 {
@@ -1864,6 +1883,7 @@ footer .footerLogo {
   color: #2C343E;
   border-radius: 10px;
   width: 32%;
+  max-height: 100%;
   padding: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1872,16 +1892,16 @@ footer .footerLogo {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
 .plan_picker .plan_item_option p {
-  max-width: 85%;
+  font-size: .8rem;
 }
 
 .plan_picker .plan_item_option h4 {
@@ -1941,11 +1961,11 @@ footer .footerLogo {
 }
 
 .plan_picker .arrow {
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.plan_picker .open .arrow {
+.plan_picker .arrowOpen {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
