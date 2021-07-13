@@ -14,7 +14,7 @@
 .about_hero{
     background-image: url(/assets/about/desktop/image-hero-whitecup.jpg);
     background-size: 100%;
-    object-fit: fill;
+    object-fit: cover;
     background-repeat: none;
     border-radius: 10px;
     margin: 0 5rem;
@@ -27,9 +27,9 @@
     margin-left: 5.25rem;
     color: white;
     max-width: 35%;
-    padding: 9rem 0;
+    padding: 7rem 0;
 
-    h2{
+    h1{
         margin-bottom: 1rem;
     }
 
@@ -101,6 +101,7 @@
 
     h4{
         color: $color-grey;
+        font-size: 2rem;
     }
 }
 
@@ -138,6 +139,136 @@
         }
 }  
 
+@media screen and (min-width: 1025px) and (max-width: 1920px){
+    .about_hero{
+        background-repeat: none;
+        background-size: cover;
+        background-image: url(/assets/about/tablet/image-hero-whitecup.jpg);
+    }
+    .about_heroText{
+        display: flex; 
+        flex-flow: column nowrap;
+        justify-content: start;
+        margin-left: 4.25rem;
+        color: white;
+        max-width: 75%;
+        padding: 3rem 0;
+    
+        h2{
+            margin-bottom: 1rem;
+        }
+    
+        p{
+            max-width: 80%;
+        }
+    }
+    // Commitment Section
+    .commitment{
+        display: flex;
+        flex-flow: row wrap;
+        margin: 7rem 5rem;
+        justify-content: space-around;
+        align-items: center;
+    
+        img{
+            border-radius: 10px;
+        }
+    }
+    .commitment_text{
+        text-align: left;
+        padding: 4rem 4rem 4rem 0;
+        max-width: 50%;
+    }
+    //Quality section
+    .quality{
+        background-image: url(/assets/about/desktop/bg-quality.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        margin: 0 2rem 3rem;
+        padding: 2rem 1rem;
+        color: white;
+        text-align: left;
+        max-height: 30rem;
+        justify-content: center;
+        
+    
+        .quality_wrapper{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -5rem;
+        
+        // transform: translateY(-2%);
+    
+            .quality_text{
+                display: flex;
+                flex-flow: column nowrap;
+                padding: 3rem;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-top: 7rem;
+    
+                p{
+                    max-width: 33.75rem;
+                }
+            }
+    
+            img{
+                border-radius: 10px;
+                padding-right: 2rem;
+            }
+        }
+    }
+    
+    //Headquarters section
+    .headquarters{
+        margin: 3rem 4rem 10rem;
+        padding-top: 2rem;
+    
+        h4{
+            color: $color-grey;
+            font-size: 2rem;
+        }
+    }
+    
+    .headquarters_wrapper{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        gap: 1rem 10rem;
+        position: relative;
+    }
+    
+    .region{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+    
+        padding-right: 5rem;
+    
+            h4{
+                margin: 0 0 1rem 0;
+                color: $color-grey;
+            }
+    
+            p{
+            color: $color-darkGreyBlue;
+            padding: .25rem 0 0 0;
+            margin: 0;
+            }
+    
+            img{
+                max-height: 3.125rem;
+                max-width: 3.125rem;
+                margin: 3rem 0 3rem 0;
+            }
+    }  
+    
+}
+
 @media screen and (min-width: 699px) and (max-width: 1024px){
     .mobileImg{
         display: none;
@@ -153,7 +284,7 @@
 .about_hero{
     background-image: url(/assets/about/tablet/image-hero-whitecup.jpg);
     background-size: 100%;
-    object-fit: fill;
+    object-fit: cover;
     background-repeat: none;
     border-radius: 10px;
     margin: 0 1rem;
@@ -166,7 +297,7 @@
     margin-left: 4.25rem;
     color: white;
     max-width: 75%;
-    padding: 5rem 0;
+    padding: 3rem 0;
 
     h2{
         margin-bottom: 1rem;
@@ -359,7 +490,7 @@
         background-image: url(/assets/about/mobile/bg-quality.png);
         margin: 3rem 1rem;
         text-align: center;
-        max-height: 587px;
+        max-height: 34rem;
         justify-content: center;
         
     
@@ -385,6 +516,7 @@
                 }
                 p{
                     font-size: .9rem;
+                    padding: .75rem;
                 }
             }
     
@@ -396,8 +528,9 @@
     }
 
     .headquarters{
-        margin: 3rem 1rem;
+        margin: 2rem 1rem;
         text-align: center;
+        padding-top: .5rem;
         .headquarters_wrapper{
             display: flex;
             flex-flow: column nowrap;

@@ -35,7 +35,7 @@
     justify-content: space-around;
 
     h4{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -114,8 +114,8 @@
         justify-content: flex-start;
         align-items: flex-start;
         p{
-            // max-width: 90%;
-            font-size: .8rem;
+            max-width: 80%;
+            font-size: 1.15rem;
         }
         h4{
             margin: 0;
@@ -186,6 +186,13 @@
     }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1920px){
+    .plan_hero{
+        background-repeat: none;
+        background-size: cover;
+        background-image: url(/assets/plan/tablet/image-hero-blackcup.jpg);
+    }
+}
 
 @media screen and (min-width: 699px) and (max-width: 1024px){
     .mobileImg{
@@ -206,10 +213,10 @@
     .plan_hero{
         background-image: url(/assets/plan/tablet/image-hero-blackcup.jpg);
         background-size: 100%;
-        object-fit: fill;
+        object-fit: cover;
         background-repeat: none;
         border-radius: 10px;
-        margin: 0 1rem 2rem;
+        margin: 0 1rem;
     }
 
     .plan_heroText{
